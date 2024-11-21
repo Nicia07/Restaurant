@@ -1,0 +1,142 @@
+body { font-family: Arial, sans-serif; line-height: 1.6; }
+        header { text-align: center; padding: 50px; background-color: #f4f4f4; }
+        /* syblé une balise qui s'appel img qui est un enfant de la balise header D'ACCORD */
+        header img { max-width: 100%; height: auto; }
+        .intro { padding: 20px; text-align: center; background-color: #fff; }
+        .menu { padding: 20px; background-color: #f9f9f9; }
+        .cta { text-align: center; padding: 30px; background-color: #ff6347; color: #fff; font-size: 20px; }
+        .testimonials { background-color: #f1f1f1; padding: 20px; }
+       /*j'ai visé le corp de la page qui est body apres j'ai viser l'id #mam*/
+        body #mam {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff6347;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .team-member {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .team-member h3 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .team-member p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        
+        body #pap{
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: yellowgreen;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff6347;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .contact-container {
+            width: 50%;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #ff6347;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        /* C'est quand je clique le boutton sa me met la couleur du fond que j'ai choisi qui est rouge */
+        button:hover {
+            background-color: #e5533f;
+        }
+      
+        .info-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .info-container p {
+            font-size: 16px;
+            margin: 10px 0;
+        }

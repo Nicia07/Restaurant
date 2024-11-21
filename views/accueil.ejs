@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"></link>
+    <title>Restaurant 100% Halal</title>
+</head>
+<body>
+    <h1>Bienvenue chez nous.</h1>
+<!-- Balise EJS -->
+<% utilisateur.nom.forEach(n => { %> <!-- Pour chaque élément dans le tableau utilisateur.nom -->
+  <h3> <%= utilisateur.masalutation + " " + n %></h3> <!-- n signifie un des noms récupérés dans le tableau -->
+<% }) %>
+
+<header>
+  <img src="Restaurant.jpg" alt="Photo du restaurant">
+  <h1>Bienvenue au Restaurant Halal food</h1>
+  <p><em>"Des saveurs authentiques, servies avec passion"</em></p>
+</header>
+
+
+
+    <div class="intro">
+    <h2>À propos de nous</h2>
+    <p>Depuis 2015, nous avons à cœur de vous offrir une expérience culinaire unique, alliant tradition et créativité. Notre cuisine privilégie les produits locaux et de saison, pour garantir fraîcheur et qualité à chaque plat servi.</p>
+</div>
+
+<div class="menu">
+    <h2>Nos Spécialités</h2>
+    <ul>
+        <li><a href="accueil.html">Accueil</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="equipe.html">Equipe</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        
+    </ul>
+</div>
+
+<div class="cta">
+    <h2>Prêt à commander ?</h2>
+    <p>Découvrez notre <strong><a href="/menu" style="color: #fff;">menu complet</a></strong> et faites votre choix !</p>
+    <p><a href="/commander" style="background-color: #fff; padding: 10px 20px; color: #ff6347; text-decoration: none;">Commander en ligne</a></p>
+</div>
+
+<div class="testimonials">
+    <h2>Ce que disent nos clients :</h2>
+    <p>"Un restaurant charmant avec une cuisine raffinée. Je recommande leur tartare de saumon, un vrai délice !" – Marie</p>
+</div>
+
+<footer>
+    <p>Adresse : 3 rue de la providence 97600 Mamoudzou</p>
+    <p>Téléphone : 0639123456</p>
+    <p><a href="/contact">Contactez-nous</a></p>
+    <p><a href="/reserver">Réservez une table</a></p>
+</footer>
+
+</body>
+</html>

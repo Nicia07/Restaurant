@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"></link>
+    <title>Menu - Restaurant Halal food</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Notre Menu</h1>
+        <!-- Balise EJS -->
+<% nosMenus.Margherita.forEach(M => { %> <!-- Pour chaque élément dans le tableau utilisateur.nom -->
+    <h3> <%= M%></h3> <!-- n signifie un des noms récupérés dans le tableau -->
+  <% }) %>
+        <p><em>Découvrez les plats délicieux que nous proposons.</em></p>
+    </header>
+    
+    <div class="menu-container">
+        <!-- Plat 1 -->
+        <div class="menu-item">
+            <img src="pizza margherita.jpg" alt="Pizza Margherita">
+            <h3>Pizza Margherita</h3>
+            <p>Une pizza classique avec tomate, mozzarella, basilic frais.</p>
+            <p class="price">€12,50</p>
+
+            </div>
+
+            <!-- Plat 2 -->
+    <div class="menu-item">
+        <img src="burger Gourmet.jpg" alt="Burger Gourmet">
+        <h3>Burger Gourmet</h3>
+        <p>Un burger juteux avec viande de qualité, fromage, légumes frais.</p>
+        <p class="price">€15,00</p>
+    </div>
+
+    <!-- Plat 3 -->
+    <div class="menu-item">
+        <img src="salade cesar.jpg" alt="Salade César">
+        <h3>Salade César</h3>
+        <p>Salade fraîche avec poulet grillé, laitue, parmesan et sauce César.</p>
+        <p class="price">€9,90</p>
+    </div>
+
+    <!-- Plat 4 -->
+    <div class="menu-item">
+        <img src="Pasta carbonara.jpg" alt="Pasta Carbonara">
+        <h3>Pasta Carbonara</h3>
+        <p>Des pâtes crémeuses avec lardons, œuf et parmesan.</p>
+        <p class="price">€13,00</p>
+    </div>
+
+    <!-- Plat 5 -->
+    <div class="menu-item">
+        <img src="sushi assorti.jpg" alt="Sushi Assorti">
+        <h3>Sushi Assorti</h3>
+        <p>Sushis frais avec saumon, thon et légumes croquants.</p>
+        <p class="price">€18,50</p>
+    </div>
+
+    <!-- Plat 6 -->
+    <div class="menu-item">
+        <img src="tiramisu.avif" alt="Tiramisu">
+        <h3>Tiramisu</h3>
+        <p>Un délicieux tiramisu maison avec café et mascarpone.</p>
+        <p class="price">€6,50</p>
+        </div>
+</body>
+</html>

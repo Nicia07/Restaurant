@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"></link>
+    <title>Notre Equipe - Restaurant Halal food</title>
+</head>
+<body id="#mam">
+    <header>
+        <h1>Rencontrez notre équipe</h1>
+        <!-- Balise EJS -->
+<% partieEquipe..forEach(E => { %> <!-- Pour chaque élément dans le tableau utilisateur.nom -->
+    <h3> <%= E %></h3> <!-- n signifie un des noms récupérés dans le tableau -->
+  <% }) %>
+        <p><em>Un service dédié pour vous offrir la meilleure expérience culinaire</em></p>
+    </header>
+
+    <section>
+        <h2>Les membres de notre équipe</h2>
+        <div class="team-container">
+    
+            <!-- Membre 1 -->
+            <div class="team-member">
+                <img src="chapeau-chef-cuisinier.png" alt="Photo de Pierre Dupont">
+                <h3>Pierre Dupont</h3>
+                <p>Chef de Cuisine</p>
+            </div>
+    
+            <!-- Membre 2 -->
+            <div class="team-member">
+                <img src="Sou Chef.jpg" alt="Photo de Marie Leclerc">
+                <h3>David Leclerc</h3>
+                <p>Sous-Chef</p>
+            </div>
+    
+            <!-- Membre 3 -->
+            <div class="team-member">
+                <img src="serveur.jpg" alt="Photo de Julien Martin">
+                <h3>Julien Martin</h3>
+                <p>Serveur Principal</p>
+            </div>
+    
+            <!-- Membre 4 -->
+            <div class="team-member">
+                <img src="responsable de la salle.jpg" alt="Photo de Clara Roy">
+                <h3>Clara Roy</h3>
+                <p>Responsable de salle</p>
+            </div>
+    
+            <!-- Membre 5 -->
+            <div class="team-member">
+                <img src="barmaid.jpg" alt="Photo de Sophie Durand">
+                <h3>Julien Durand</h3>
+                <p>Barmaid</p>
+            </div>
+    
+        </div>
+    </section>
+</body>
+</html>
