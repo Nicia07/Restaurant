@@ -16,6 +16,7 @@ app.set("views","./views");
 //Préciser le moteur de lecteur de vue a savoir ejs
 app.set("view engine", "ejs");
 
+app.use(express.static("public"));//
 
 app.get("/", (req, res) => { // ("/") veut dire que la route est par défaut
     res.writeHead(200, {
