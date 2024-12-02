@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="css/style.css"></link>
     <title>Contactez-nous - Restaurant Halal food</title>
 </head>
-<body>
+<body id="contact">
     
     <header id="pap">
+
         <h1>Contactez-nous</h1>
+        <%- include("navbar") -%>
         <!-- Balise EJS -->
 <% objetContact.nom.forEach(n => { %> <!-- Pour chaque élément dans le tableau utilisateur.nom -->
     <h3> <%= n %></h3> <!-- n signifie un des noms récupérés dans le tableau -->
@@ -40,5 +42,7 @@
         <p>Lundi - Vendredi: 12h00 - 14h30 et 18h30 - 23h00</p>
         <p>Samedi - Dimanche: 18h30 - 23h00</p>
     </div>
+    <!-- Inclure le footer -->
+    <%- include('footer') %>
 </body>
 </html>
