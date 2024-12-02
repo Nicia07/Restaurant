@@ -7,6 +7,9 @@
     <title>Restaurant 100% Halal</title>
 </head>
 <body>
+    <!--ici j'inclu la barre de navigation (navbar)-->
+    <%- include("navbar") -%>
+    <!--fin de navbar-->
     <h1>Bienvenue chez nous.</h1>
 <!-- Balise EJS -->
 <% utilisateur.nom.forEach(n => { %> <!-- Pour chaque élément dans le tableau utilisateur.nom -->
@@ -26,16 +29,7 @@
     <p>Depuis 2015, nous avons à cœur de vous offrir une expérience culinaire unique, alliant tradition et créativité. Notre cuisine privilégie les produits locaux et de saison, pour garantir fraîcheur et qualité à chaque plat servi.</p>
 </div>
 
-<div class="menu">
-    <h2>Nos Spécialités</h2>
-    <ul>
-        <li><a href="accueil.html">Accueil</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="equipe.html">Equipe</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        
-    </ul>
-</div>
+
 
 <div class="cta">
     <h2>Prêt à commander ?</h2>
@@ -47,13 +41,8 @@
     <h2>Ce que disent nos clients :</h2>
     <p>"Un restaurant charmant avec une cuisine raffinée. Je recommande leur tartare de saumon, un vrai délice !" – Marie</p>
 </div>
-
-<footer>
-    <p>Adresse : 3 rue de la providence 97600 Mamoudzou</p>
-    <p>Téléphone : 0639123456</p>
-    <p><a href="/contact">Contactez-nous</a></p>
-    <p><a href="/reserver">Réservez une table</a></p>
-</footer>
+<!-- Inclure le footer -->
+<%- include('footer') %>
 
 </body>
 </html>

@@ -2,13 +2,27 @@
 // importer le framework Express.js
 // import express from "express";
 const express = require("express");
+const mysql = require("mysql");
+const myConnection = require("express-myconnection");
 
 const url = require('url');
 
 const fs = require('fs'); // le module fs permet de manipuler des fichiers
+const connection = require("express-myconnection");
+
+const optionConnection = {
+    host: "locahost",
+    user: "root",
+    password:"Nicia@16",
+    port: 3306,
+    database:"restaurant"
+};
 
 //crée l'application express.js dans la variable app
 const app = express();
+
+// Middleware de connection a la base de donnée 
+app.use(myConnection,(optionConnection, "pool"));//pool est la stratégie de connection à la base de données.
 
 //L'endroit ou se siteunt les vues qui s'affichent sur le navigateur
 app.set("views","./views");
@@ -73,7 +87,7 @@ app.get("/menu", (req, res) => {
 
 app.get("/equipe", (req, res) => {
     partieEquipe={
-        nom:[""]
+        nom:["Valdez","Roupa"],
         
     }
     res.render("equipe",partieEquipe);
