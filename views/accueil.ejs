@@ -3,46 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css"></link>
+    <link rel="stylesheet" href="css/style.css">
     <title>Restaurant 100% Halal</title>
 </head>
 <body>
-    <!--ici j'inclu la barre de navigation (navbar)-->
-    <%- include("navbar") -%>
-    <!--fin de navbar-->
-    <h1>Bienvenue chez nous.</h1>
-<!-- Balise EJS -->
-<% utilisateur.nom.forEach(n => { %> <!-- Pour chaque élément dans le tableau utilisateur.nom -->
-  <h3> <%= utilisateur.masalutation + " " + n %></h3> <!-- n signifie un des noms récupérés dans le tableau -->
-<% }) %>
+    <!-- Balise EJS pour afficher les plats -->
+    <section>
+        <% resultat.forEach(r => { %>
+            <h3><%= r.nom %></h3>
+            <span><%= r.prix %></span><br>
+            <input type="button" value="supprimer" onclick="supprimerDonnees('<%= r.id %>')">
+            <input type="button" value="modifier" onclick="remplirDonnees('<%= r.id %>', '<%= r.nom %>', '<%= r.prix %>')">
+        <% }) %> <!-- Fermeture correcte de la boucle EJS -->
+    </section>
 
-<header>
-  <img src="Restaurant.jpg" alt="Photo du restaurant">
-  <h1>Bienvenue au Restaurant Halal food</h1>
-  <p><em>"Des saveurs authentiques, servies avec passion"</em></p>
-</header>
+    <div>
+        <h3>Créer un nouveau plat</h3>
+        <form action="/plat" method="post">
+            <input type="hidden" name="id" id="id">
+            <label>Nom du plat:</label>
+            <input type="text" id="nomplat" name="nom"><br>
+            <label>Prix:</label><br>
+            <input type="number" id="prix" name="prix"><br>
+            <input type="submit" value="Enregistrer">
+        </form>
+    </div>
 
-
+    <header>
+        <img src="Restaurant.jpg" alt="Photo du restaurant">
+        <h1>Bienvenue au Restaurant Halal food</h1>
+        <p><em>"Des saveurs authentiques, servies avec passion"</em></p>
+    </header>
 
     <div class="intro">
-    <h2>À propos de nous</h2>
-    <p>Depuis 2015, nous avons à cœur de vous offrir une expérience culinaire unique, alliant tradition et créativité. Notre cuisine privilégie les produits locaux et de saison, pour garantir fraîcheur et qualité à chaque plat servi.</p>
-</div>
+        <h2>À propos de nous</h2>
+        <p>Depuis 2015, nous avons à cœur de vous offrir une expérience culinaire unique, alliant tradition et créativité. Notre cuisine privilégie les produits locaux et de saison, pour garantir fraîcheur et qualité à chaque plat servi.</p>
+    </div>
 
+    <div class="cta">
+        <h2>Prêt à commander ?</h2>
+        <p>Découvrez notre <strong><a href="/menu" style="color: #fff;">menu complet</a></strong> et faites votre choix !</p>
+        <p><a href="/commander" style="background-color: #fff; padding: 10px 20px; color: #ff6347; text-decoration: none;">Commander en ligne</a></p>
+    </div>
 
-
-<div class="cta">
-    <h2>Prêt à commander ?</h2>
-    <p>Découvrez notre <strong><a href="/menu" style="color: #fff;">menu complet</a></strong> et faites votre choix !</p>
-    <p><a href="/commander" style="background-color: #fff; padding: 10px 20px; color: #ff6347; text-decoration: none;">Commander en ligne</a></p>
-</div>
-
-<div class="testimonials">
-    <h2>Ce que disent nos clients :</h2>
-    <p>"Un restaurant charmant avec une cuisine raffinée. Je recommande leur tartare de saumon, un vrai délice !" – Marie</p>
-</div>
-<!-- Inclure le footer -->
-<%- include('footer') %>
+    <div class="testimonials">
+        <h2>Ce que disent nos clients :</h2>
+        <p>"Un restaurant charmant avec une cuisine raffinée. Je recommande leur tartare de saumon, un vrai délice !" – Marie</p>
+    </div>
 
 </body>
+<script>
+    function remplirDonnees(id, nom, prix) {
+        document.querySelector("#id").value = id;
+        document.querySelector("#nomplat").value = nom;
+        document.querySelector("#prix").value = prix;
+    }
+    function supprimerDonnees(id) {
+        let routeComplete = "plat/" + id;
+
+        fetch(
+            routeComplete, {methode : "DELETE"},
+            console.log("affiche fetch 1")
+        ).then(
+            (reponse) => response.json()
+        ).then(
+            (donnee) => window.location.href = donnee.routeRacine
+        ).catch((erreur) => console.log(erreur))
+    }
+</script>
+
 </html>
